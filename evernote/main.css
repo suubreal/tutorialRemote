@@ -1,0 +1,93 @@
+*{
+	margin : 0;
+	padding : 0;
+}
+
+.navbar-fixed-top{
+	background-color: #92cfbf;
+	border:0;
+	height:200px;
+}
+
+.page {
+	margin-top: 200px;  /*상단 만큼 내리기*/
+
+}
+
+.navigation {
+	background-color: #d9d6cf;
+
+}
+
+.container {
+	background-color: #f6f2cf;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	margin-left: 20px;
+}
+
+.navigation a{
+	padding : 10px 15px 10px 15px;
+}
+
+.detail {
+	background-color: #e68a7b;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	border:0;
+}
+
+.writedetail {
+	margin-top: 20px;
+	background-color: #e68a7b;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	border:0;
+}
+
+
+#cke_userwrite {
+	margin-top:20px;
+}
+
+.writeinfo {
+	margin-top:10px;
+	height:30px;
+}
+
+#boardtitle,#boardimage,#boardvod,#hashtag,#reghashtag{
+	margin-left: 10px;
+}
+
+
+.board {
+	background-color: white;
+	margin-top:30px;
+}
+
+@media screen and (max-width:1000px) {
+	.navigation {
+		text-align: center;
+	}
+
+	/*메뉴 크기 조절*/
+	.navigation a{
+		float : left;
+		padding : 10px 15px 10px 15px;
+		width:25%;
+	}
+
+	.nav li a{
+		width:25%;
+	}
+
+
+
+}

@@ -1,0 +1,35 @@
+{
+  "users":{
+    "user1":{
+        "username":"john",
+        "full_name":"John Vincent",
+        "created_at":"9th Feb 2015",
+        "groups":{
+            "group1":true,
+            "group3":true
+        }
+        "last_logins":...
+    },
+    "user2": ...,
+    "user3": ...
+  }
+  "groups": {
+     "group1"{
+        "group_name":"Administrators",
+        "group_description":"Users who can do anything!",
+        "no_of_users":2,
+        "members":{
+            "user1":true,
+            "user3":true
+        }
+      },
+     "group2"{
+        "group_name":"Moderators",
+        "group_description":"Users who can only moderate!",
+        "no_of_users":1,
+        "members":{
+            "user2":true
+        }
+      }
+   }
+ }

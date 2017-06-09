@@ -1,0 +1,57 @@
+*{
+	margin : 0;
+	padding : 0;
+}
+
+.navbar-fixed-top{
+	background-color: #92cfbf;
+	border:0;
+	height:200px;
+}
+
+.page {
+	margin-top: 200px;  /*상단 만큼 내리기*/
+
+}
+
+.navigation {
+	background-color: #d9d6cf;
+}
+
+.container {
+	background-color: #f6f2cf;
+}
+
+a {
+	text-decoration: none;
+}
+
+.navigation a{
+	padding : 10px 15px 10px 15px;
+}
+
+
+#editor1 {
+	margin-top: 20px;
+}
+
+
+@media screen and (max-width:1000px) {
+	.navigation {
+		text-align: center;
+	}
+
+	/*메뉴 크기 조절*/
+	.navigation a{
+		float : left;
+		padding : 10px 15px 10px 15px;
+		width:25%;
+	}
+
+	.nav li a{
+		width:25%;
+	}
+
+
+
+}

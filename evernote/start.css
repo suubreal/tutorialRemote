@@ -1,0 +1,51 @@
+*{
+	margin : 0;
+	padding : 0;
+}
+
+.navbar-fixed-top{
+	background-color: #92cfbf;
+	border:0;
+	height:200px;
+}
+
+.page {
+	padding-top: 200px;
+	background-color: #f6f2cf;
+}
+
+.container {
+	margin-top:120px;
+}
+
+.signinfo {
+	height:30px;
+}
+
+#userid, #userpassword,#confirm {
+	margin-left: 10px;
+}
+
+.detail {
+	background-color: #e68a7b;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	border:0;
+}
+
+
+
+
+
+@media screen and (max-width:1000px) {
+.navbar-fixed-top{
+	background-color: #92cfbf;
+	border:0;
+	height:100px;
+}
+
+.page {
+	padding-top: 100px;
+	background-color: #f6f2cf;
+}

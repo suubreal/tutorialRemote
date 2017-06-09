@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<title>write page</title>
+	<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script> 
+
+
+	<!--  컴파일(편집) 되고 압축 된 최신 CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">	 
+	<!-- 선택사항: jQuery 라이브러리 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- 선택사항: 부트스트랩에 통합 된 자바스크립트 플러그인 -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src = "https://cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+	<script src="write.js"></script>
+
+
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+</script>
+
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<header>
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+</header>
+<body >
+
+<div class="page">
+	<div class="col-xs-12 col-md-2 navigation">
+		<a class="user" href="#" id="emailinfo"> ▼▼▼님</a>
+		<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyC9mmz553AqSVkrKnYXAn4V58ThdAZ7pp4",
+	    authDomain: "evernote-9f6ec.firebaseapp.com",
+	    databaseURL: "https://evernote-9f6ec.firebaseio.com",
+	    projectId: "evernote-9f6ec",
+	    storageBucket: "evernote-9f6ec.appspot.com",
+	    messagingSenderId: "700515021099"
+	  };
+	 
+	 firebase.initializeApp(config);
+	 firebase.auth().onAuthStateChanged(function(user) {
+		  if (user) {
+		    document.getElementById("emailinfo").innerHTML=user.email;
+		    init(user.email);
+
+		  } else {
+		    // No user is signed in.
+		  }
+		});
+		</script>
+		<ul class="nav">
+			<li><a href="write.html">작성하기</a></li>
+			<li><a href="search.html">검색하기</a></li>
+			<li><a href="main.html">홈화면</a></li>
+		</ul>
+	</div>
+	<div class="col-xs-12 col-md-10 container">
+      	<div class="writeinfo">
+	        <label for="boardtitle" class="col-xs-2 col-md-2 detail">제목</label>
+	        <input id="boardtitle" placeholder="제목" class="col-xs-3 col-md-3" required autofocus>
+	    </div>
+	     <div class="writeinfo">
+	        <label for="boardimage" class="col-xs-2 col-md-2 detail" >이미지</label>
+	        <input type="file" id="boardimage"placeholder="이미지" class="col-xs-3 col-md-3" required>
+	     </div>
+	     <div class="writeinfo">
+	        <label for="boardvod" class="col-xs-2 col-md-2 detail" >동영상</label>
+	        <input type="file" id="boardvod"placeholder="이미지" class="col-xs-3 col-md-3" accept=".mp4" required>
+	     </div>
+	     	     <div class="writeinfo">
+	        <label for="boardfile" class="col-xs-2 col-md-2 detail" >파일</label>
+	        <input type="file" id="boardfile"placeholder="이미지" class="col-xs-3 col-md-3" required>
+	     </div>
+
+
+	     <div class="writeinfo">
+	        <label for="hashtag" class="col-xs-2 col-md-2 detail">해시태그</label>
+	        <input id="hashtag" placeholder="해시태그" class="col-xs-3 col-md-3" required autofocus>
+	        <button id="reghashtag" class="col-xs-2 col-md-2 detail">추가</button>
+	    </div>
+	      <div class="writeinfo"> 
+		 <textarea name="editor1" id="userwrite"></textarea>
+		 <script>
+                CKEDITOR.replace( 'editor1' );
+         </script>
+	     <button id="submit" onclick="submit()" class="col-xs-2 col-xs-offset-5 col-md-2 col-md-offset-5 writedetail">확인</button>
+	 </div>
+	</div>
+</div>
+
+</body>
+</html>

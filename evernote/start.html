@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<title>start page</title>
+	<!--  컴파일(편집) 되고 압축 된 최신 CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	 
+	<!-- 선택사항: jQuery 라이브러리 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- 선택사항: 부트스트랩에 통합 된 자바스크립트 플러그인 -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<script src="start.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyC9mmz553AqSVkrKnYXAn4V58ThdAZ7pp4",
+	    authDomain: "evernote-9f6ec.firebaseapp.com",
+	    databaseURL: "https://evernote-9f6ec.firebaseio.com",
+	    projectId: "evernote-9f6ec",
+	    storageBucket: "evernote-9f6ec.appspot.com",
+	    messagingSenderId: "700515021099"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	<link rel="stylesheet" href="start.css">
+</head>
+
+<header>
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
+</header>
+<body>
+
+<div class="col-xs-12 col-md-12 page">
+    <div class="container">
+      	<div class="signinfo">
+	        <label for="userid" class="col-xs-1 col-xs-offset-4 col-md-1 col-md-offset-4 detail">ID</label>
+	        <input id="userid" placeholder="아이디" class="col-xs-3 col-md-3" required autofocus>
+	    </div>
+	     <div class="signinfo">
+	        <label for="userpassword" class="col-xs-1 col-xs-offset-4 col-md-1 col-md-offset-4 detail" >PW</label>
+	        <input type="password" id="userpassword"placeholder="비밀번호" class="col-xs-3 col-md-3" required>
+	     </div>
+	     <div class="signinfo"> 
+	        <button id="sign" onclick="sign()" class="col-xs-2 col-xs-offset-4 col-md-2 col-md-offset-4 detail">가입</button>
+	        <button id="confirm" onclick="confirm()"class="col-xs-2 col-md-2 detail">확인</button>
+	     </div>
+
+    </div> <!-- /container -->
+</div>
+</body>
+</html>
