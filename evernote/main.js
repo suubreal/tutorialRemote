@@ -393,7 +393,7 @@ function search() {
 																            var phashtagtext = document.createTextNode("해시태그 : "+data[tempnum].hashtag);
 																            phashtag.appendChild(phashtagtext);
 																            phashtag.setAttribute("class","hashtag");
-																           // phashtag.setAttribute("id","hashtag"+tempnum);
+																            phashtag.setAttribute("id","hashtag"+tempnum);
 
 																            board.appendChild(phashtag);
 
